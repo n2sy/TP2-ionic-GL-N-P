@@ -10,6 +10,13 @@ export class HomePage implements OnInit {
   tab = [];
   constructor(private listCourses: ListCoursesService) {}
   ngOnInit(): void {
+    console.log(this.tab);
     this.tab = this.listCourses.getAllCourses();
+  }
+
+  ionViewWillEnter() {
+    // console.log('Will Enter');
+    // this.tab = this.listCourses.getAllCourses();
+    // console.log(this.tab);
   }
 }

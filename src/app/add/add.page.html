@@ -5,5 +5,24 @@
 </ion-header>
 
 <ion-content>
+  <div class="ion-margin">
+    <form #f="ngForm">
+      <label for="bilel">Title</label>
+      <input #i="ngModel" required ngModel class="form-control" type="text" name="intitule" id="bilel">
+      <!-- <div *ngIf="i.invalid" class="alert alert-danger">Ce champ est obligatoire</div> -->
+      <label for="author">Author</label>
+      <input ngModel class="form-control" type="text" name="author" id="author">
+      <label for="image">Image</label>
+      <input ngModel class="form-control" type="url" name="image" id="image">
+      <label for="keywords">keywords</label>
+      <input ngModel class="form-control" type="text" name="keywords" id="keywords">
+
+      <ion-button color="primary" (click)="addNewCourse(f.value)">Add</ion-button>
+    </form>
+
+  </div>
+
+
+
 
 </ion-content>

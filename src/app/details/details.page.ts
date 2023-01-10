@@ -36,7 +36,7 @@ export class DetailsPage implements OnInit {
         {
           text: 'Yes',
           handler: () => {
-            this.listCourse.deleteCourse(this.selectedCourse.id);
+            this.listCourse.deleteCourse(this.selectedCourse);
             this.router.navigateByUrl('/home');
           },
         },
